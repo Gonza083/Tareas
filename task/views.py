@@ -45,7 +45,7 @@ def task(request):
 def task_completed(request):
    tasks = Task.objects.filter(user=request.user, datecompleted__isnull=False).order_by
    ()
-   return render (request,'task.html', {'tasks': tasks})
+   return render (request,'task_completed.html', {'tasks': tasks})
 
 
 def signout(request):
